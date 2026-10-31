@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NovaTech Innovations — IoT, embedded systems and smart home automation.">
+<title>NovaTech Innovations | Smart Living, Smarter Future</title>
+<style>
+:root{--navy:#071426;--blue:#168bff;--cyan:#22d3ee;--ink:#10233e;--muted:#60718a;--pale:#f3f8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{background:rgba(5,18,36,.97);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid #203653}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.12rem;letter-spacing:.3px}
+.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;color:#06152b;font-weight:900;font-size:22px}
+.links{display:flex;gap:25px;font-size:.92rem;color:#d5e5f7}.links a:hover{color:var(--cyan)}
+.hero{background:radial-gradient(circle at 80% 30%,#123d69 0,transparent 34%),linear-gradient(120deg,#061326,#0b2545 65%,#061326);color:white;padding:95px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:45px}
+.eyebrow{color:var(--cyan);font-weight:700;text-transform:uppercase;letter-spacing:2.5px;font-size:.78rem}
+h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.02;margin:18px 0 20px;letter-spacing:-2px}
+h1 span{color:var(--cyan)}.hero p{color:#c7d7e9;font-size:1.1rem;line-height:1.75;max-width:610px}
+.btn{display:inline-block;margin-top:18px;padding:14px 22px;border-radius:9px;background:linear-gradient(90deg,var(--blue),var(--cyan));color:#04162b;font-weight:800}
+.visual{min-height:340px;border:1px solid #2c5b84;border-radius:28px;background:linear-gradient(145deg,rgba(30,144,255,.18),rgba(34,211,238,.05));position:relative;padding:28px;display:grid;place-items:center;box-shadow:0 25px 70px #0005}
+.house{width:85%;height:230px;border:3px solid #8edcff;border-bottom:0;clip-path:polygon(50% 0,100% 35%,100% 100%,0 100%,0 35%);position:relative;filter:drop-shadow(0 0 15px #1aaeff)}
+.house:before{content:"";position:absolute;left:40%;bottom:0;width:22%;height:48%;border:2px solid #8edcff;background:#0e3d65}
+.node{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--cyan);box-shadow:0 0 22px var(--cyan)}
+.n1{top:23%;left:23%}.n2{top:48%;right:18%}.n3{bottom:18%;left:18%}
+.signal{position:absolute;color:#b9edff;font-size:.78rem;letter-spacing:1px}.s1{top:25px;left:25px}.s2{bottom:25px;right:25px}
+section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+.section-head .eyebrow{color:#087fc9}h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0;color:var(--navy);letter-spacing:-1px}
+.section-head p{color:var(--muted);line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:28px;border:1px solid #e2ebf5;border-radius:18px;background:white;box-shadow:0 12px 35px #0d31500b}
+.icon{width:48px;height:48px;border-radius:14px;background:#e7f6ff;color:#087fc9;display:grid;place-items:center;font-size:24px}
+.card h3{margin:19px 0 9px}.card p{color:var(--muted);line-height:1.65;margin:0}
+.about{background:var(--pale)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-copy p{color:var(--muted);line-height:1.8}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:25px}
+.feature{padding:16px;border-radius:12px;background:white;border:1px solid #e3edf7;font-weight:700}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.person{padding:25px 20px;text-align:center;border:1px solid #e3edf7;border-radius:18px;background:#fff;box-shadow:0 12px 35px #0d31500a}
+.person img{width:150px;height:150px;object-fit:cover;object-position:center 30%;border-radius:50%;border:5px solid #e4f7ff;box-shadow:0 8px 25px #0b5b8b22}
+.person h3{margin:17px 0 5px}.person p{margin:0;color:var(--muted)}
+.role{display:inline-block;margin-top:12px;padding:7px 12px;border-radius:30px;background:#eaf7ff;color:#087fc9;font-size:.78rem;font-weight:800}
+.contact{background:linear-gradient(120deg,#071426,#0c2b4d);color:white;text-align:center}
+.contact h2{color:white}.contact p{color:#c4d6e9;line-height:1.7}
+.contact-box{margin:30px auto 0;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.contact-box a{padding:14px 19px;border:1px solid #46749d;border-radius:10px;color:#e7f7ff}
+footer{background:#04101f;color:#8da5bf;padding:25px 0;font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){.links{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.visual{min-height:280px}.cards,.team{grid-template-columns:1fr}.hero{padding:70px 0}.feature-list{grid-template-columns:1fr 1fr}section{padding:62px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home"><span class="logo">N</span><span>NovaTech <span style="color:#35c9f0">Innovations</span></span></a>
+<div class="links"><a href="#solutions">Solutions</a><a href="#about">About</a><a href="#team">Founders</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div><div class="eyebrow">IoT • Embedded Systems • Smart Living</div>
+<h1>Make your home <span>think smarter.</span></h1>
+<p>We explore practical IoT and embedded technology to make everyday spaces more connected, convenient and responsive — from intelligent lighting to sensor-based home automation.</p>
+<a class="btn" href="#solutions">Explore our solutions →</a></div>
+<div class="visual" aria-label="Stylized smart home illustration"><span class="signal s1">CONNECTED HOME</span><div class="house"><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i></div><span class="signal s2">SENSE • CONTROL • AUTOMATE</span></div>
+</div></section>
+<section id="solutions"><div class="wrap"><div class="section-head"><div class="eyebrow">What we work on</div><h2>Technology for everyday living</h2><p>Practical systems built around sensors, microcontrollers and connected devices.</p></div>
+<div class="cards">
+<article class="card"><div class="icon">⌂</div><h3>Smart Home Automation</h3><p>Concepts for controlling lights, fans and appliances through connected control systems.</p></article>
+<article class="card"><div class="icon">◉</div><h3>IoT & Sensor Systems</h3><p>Sensor-based monitoring for motion, temperature, light and other home conditions.</p></article>
+<article class="card"><div class="icon">⌘</div><h3>Embedded Development</h3><p>Microcontroller-based prototypes, interfacing, automation logic and hardware integration.</p></article>
+</div></div></section>
+<section class="about" id="about"><div class="wrap about-grid">
+<div class="about-copy"><div class="eyebrow">About NovaTech</div><h2>Small ideas. Smarter spaces.</h2><p>NovaTech Innovations is a startup initiative focused on IoT, embedded systems and smart-home automation. We aim to turn engineering ideas into useful prototypes and approachable technology experiences.</p><p>Our approach brings together hardware, software and thoughtful design to explore solutions for real-world needs.</p></div>
+<div><div class="feature-list"><div class="feature">⚡ Embedded controllers</div><div class="feature">⌁ Connected devices</div><div class="feature">◉ Real-time sensing</div><div class="feature">⌂ Home automation</div></div></div>
+</div></section>
+<section id="team"><div class="wrap"><div class="section-head"><div class="eyebrow">The founding team</div><h2>Meet the people behind the idea</h2><p>Building practical technology with IoT and embedded systems.</p></div>
+<div class="team">
+<article class="person"><img src="assets/nilesh-1.jpeg" alt="Nilesh Naik"><h3>Nilesh Naik</h3><p>Founder &amp; CEO</p><span class="role">Founder</span></article>
+<article class="person"><img src="assets/nilesh-2.jpeg" alt="Nilesh Naik"><h3>Nilesh Naik</h3><p>Founder &amp; CEO</p><span class="role">Founder</span></article>
+<article class="person"><img src="assets/mahesh-sai.jpeg" alt="Kukka Mahesh Sai"><h3>Kukka Mahesh Sai</h3><p>Co-Founder</p><span class="role">Co-Founder</span></article>
+</div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Let's connect</div><h2>Have an idea for a smarter home?</h2><p>Reach out to discuss IoT, embedded systems and home automation concepts.</p>
+<div class="contact-box"><a href="mailto:naiknilesh652@gmail.com">✉ naiknilesh652@gmail.com</a><a href="tel:+919100564208">☎ +91 91005 64208</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 NovaTech Innovations</span><span>IoT • Embedded Systems • Smart Home Automation</span></div></footer>
+</body></html>
